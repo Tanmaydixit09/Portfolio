@@ -13,7 +13,8 @@
 
 @layer base {
   body {
-@apply bg-dark-bg text-slate-300 overflow-x-hidden antialiased;\n    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply bg-dark-bg text-slate-300 overflow-x-hidden antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
   
   ::selection {
@@ -43,12 +44,15 @@
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
-@apply bg-dark-bg;
+  @apply bg-dark-bg;
 }
+
 ::-webkit-scrollbar-thumb {
   @apply bg-zinc-700/50 rounded-full;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-zinc-600;
 }
@@ -74,4 +78,3 @@ html.light .glass-card {
 html.light ::-webkit-scrollbar-track {
   @apply bg-white;
 }
-

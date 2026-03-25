@@ -51,7 +51,7 @@ const Navbar = () => {
             onClick={(e) => handleNavClick(e, '#home')}
             className="text-2xl font-black text-white tracking-tighter hover:opacity-80 transition-opacity"
           >
-            TD.
+            TD
           </a>
 
           {/* Desktop Menu */}

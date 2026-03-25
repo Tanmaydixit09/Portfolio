@@ -148,11 +148,9 @@ const Hero = () => {
             {/* The Actual Image (circular frame) */}
             <div className="absolute inset-6 rounded-full overflow-hidden border border-zinc-800 shadow-2xl relative z-10 flex items-center justify-center">
               <img 
-                src="/avatar.jpg" 
-                alt="Tanmay Dixit - Avatar" 
-                className="w-full h-full object-cover rounded-full grayscale-[20%] hover:grayscale-0 transition-all duration-700 hover:scale-105"
-
-              />
+                src="/cv-pic-portrait.jpg" 
+                alt="Tanmay Dixit - Portrait" 
+                className="w-full h-full object-cover rounded-full grayscale-[20%] hover:grayscale-0 transition-all duration-700 hover:scale-105" />
             </div>
 
             {/* Circular Tech Badges */}
