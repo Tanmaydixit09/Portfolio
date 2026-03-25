@@ -114,8 +114,8 @@ const Hero = () => {
             <div className="absolute -inset-4 bg-zinc-900 border border-zinc-800/50 rounded-[48px] rotate-6 group-hover:rotate-3 transition-transform duration-700" />
             <div className="absolute -inset-4 bg-zinc-950 border border-zinc-800 rounded-[48px] -rotate-3 group-hover:rotate-0 transition-transform duration-700" />
             
-            {/* The Actual Image */}
-            <div className="absolute inset-0 rounded-[40px] overflow-hidden border border-zinc-800 shadow-2xl relative z-10">
+            {/* The Actual Image (circular frame) */}
+            <div className="absolute inset-0 rounded-full overflow-hidden border border-zinc-800 shadow-2xl relative z-10 flex items-center justify-center">
               <img 
                 src="/avatar.jpg" 
                 alt="Tanmay Dixit - Avatar" 
