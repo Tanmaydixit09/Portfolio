@@ -4,25 +4,26 @@ import { motion } from 'framer-motion';
 const achievements = [
   {
     title: 'LeetCode Profile',
-    date: 'Updated Mar 2026',
+    date: 'Ongoing',
     description:
-      'Solved 236 problems (Easy: 109, Medium: 109, Hard: 18). Acceptance ~93.3%. Active days: 50, Max streak: 31. Recent participation in LeetCoding challenges and steady submissions.',
+      'Solved 236 problems (Easy: 109, Medium: 109, Hard: 18). Acceptance ~93.3%. Active days: 50, Max streak: 31. Recent participation in LeetCode challenges and steady submissions.',
     link: 'https://leetcode.com/u/tanmaydixit09/'
   },
   {
     title: 'HackerRank Profile & Certifications',
-    date: 'Updated Mar 2026',
+    date: 'Ongoing',
     description:
       'Completed multiple HackerRank certifications including Problem Solving (Intermediate), JavaScript (Intermediate), React (Basic) and holds skills badges (Problem Solving, C++, Java, Python).',
     link: 'https://www.hackerrank.com/profile/tanmaydixit09'
   },
   {
     title: 'GeeksforGeeks Profile',
-    date: 'Updated Mar 2026',
+    date: 'Ongoing',
     description:
       'Active on GeeksforGeeks with problem practice and articles; profile lists coding activity and a focus on algorithmic problem solving.',
     link: 'https://www.geeksforgeeks.org/profile/tanmaydc61i'
   },
+
   
 ];
 

@@ -5,15 +5,32 @@ import { FiSend, FiMail, FiMapPin } from 'react-icons/fi';
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState({ type: '', message: '' });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Client-side validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setStatus({ type: 'error', message: 'Please fill all fields.' });
+      return;
+    }
+    if (!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(formData.email)) {
+      setStatus({ type: 'error', message: 'Please enter a valid email.' });
+      return;
+    }
+
     setIsSubmitting(true);
+    setStatus({ type: '', message: '' });
+    
+    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
+      setStatus({ type: 'success', message: 'Message sent successfully! I will be in touch shortly.' });
       setFormData({ name: '', email: '', message: '' });
-      alert('Message captured. I will be in touch shortly.');
-    }, 1500);
+      // TODO: Replace with EmailJS
+      // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_PUBLIC_KEY').then(...)
+    }, 2000);
   };
 
   return (
@@ -68,7 +85,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-1">Base Location</h4>
-                <p className="text-zinc-200 font-medium">India / Global Remote</p>
+                <p className="text-zinc-200 font-medium"> Phagwara ,Punjab ,India</p>
               </div>
             </div>
           </div>
@@ -123,13 +140,35 @@ const Contact = () => {
               ></textarea>
             </div>
 
+            {status.type && (
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`p-4 rounded-lg text-sm font-medium text-center ${
+                  status.type === 'success' 
+                    ? 'bg-emerald-500/10 border border-emerald-500/30 text-emerald-300' 
+                    : 'bg-rose-500/10 border border-rose-500/30 text-rose-300'
+                }`}
+              >
+                {status.message}
+              </motion.div>
+            )}
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full mt-4 py-4 rounded-lg bg-zinc-100 text-zinc-950 font-bold tracking-wide hover:bg-zinc-300 transition-all flex items-center justify-center gap-3 group disabled:opacity-50"
+              className="w-full mt-4 py-4 rounded-lg bg-zinc-100 text-zinc-950 font-bold tracking-wide hover:bg-zinc-300 transition-all flex items-center justify-center gap-3 group disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Transmitting...' : 'Transmit Request'}
-              {!isSubmitting && <FiSend className="group-hover:translate-x-1 transition-transform" />}
+              {isSubmitting ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-zinc-950 border-t-transparent rounded-full animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  Transmit Request
+                  <FiSend className="group-hover:translate-x-1 transition-transform" />
+                </>
+              )}
             </button>
           </form>
         </motion.div>

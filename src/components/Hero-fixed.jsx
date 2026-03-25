@@ -127,7 +127,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* Profile Image Section */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -145,17 +144,16 @@ const Hero = () => {
               <div className="w-full h-full rounded-full border-4 border-teal-400/30 shadow-[0_0_40px_rgba(52,211,153,0.15)]" />
             </div>
 
-            {/* The Actual Image (circular frame) */}
+            {/* Image frame */}
             <div className="absolute inset-6 rounded-full overflow-hidden border border-zinc-800 shadow-2xl relative z-10 flex items-center justify-center">
               <img 
                 src="/avatar.jpg" 
-                alt="Tanmay Dixit - Avatar" 
-                className="w-full h-full object-cover rounded-full grayscale-[20%] hover:grayscale-0 transition-all duration-700 hover:scale-105"
-
+                alt="Tanmay Dixit"
+                className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700 hover:scale-105"
               />
             </div>
 
-            {/* Circular Tech Badges */}
+            {/* Tech badges */}
             <motion.div 
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -179,11 +177,9 @@ const Hero = () => {
             </motion.div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );
 };
 
 export default Hero;
-

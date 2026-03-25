@@ -64,7 +64,6 @@ const TimelineItem = ({ data, isCert, index }) => (
     <div className={`md:w-1/2 ${isCert ? 'md:ml-auto md:pl-12' : 'md:pr-12 md:text-right'} relative`}>
       {/* Desktop Timeline dot */}
       <div className="absolute left-full top-1/2 -translate-y-1/2 w-4 h-4 md:w-3 md:h-3 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full shadow-[0_0_12px_#a855f7] border-2 border-purple-500/30 hover:bg-purple-500 hover:shadow-[0_0_20px_#a855f7]"></div>
-      
       <div className="glass-card p-6 md:p-8 hover:border-zinc-700 transition-colors group relative overflow-hidden">
         {/* Glow effect */}
         <div className={`absolute top-0 ${isCert ? 'left-0 bg-blue-500/5' : 'right-0 bg-purple-500/5'} w-1/2 h-full blur-2xl group-hover:bg-opacity-10 transition-all duration-500 pointer-events-none`}></div>
@@ -73,7 +72,7 @@ const TimelineItem = ({ data, isCert, index }) => (
           <span className={`inline-block px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800/80 ${isCert ? 'text-blue-400' : 'text-purple-400'} text-xs font-bold tracking-widest uppercase mb-4 shadow-sm backdrop-blur-sm`}>
             {data.duration || data.date}
           </span>
-          <h3 className={`text-xl md:text-2xl font-bold text-white mb-2 tracking-tight flex items-center gap-2 ${isCert ? 'justify-start md:justify-start' : 'justify-end md:justify-end'}`}>
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight flex items-center gap-2 ${isCert ? 'justify-start md:justify-start' : 'justify-end md:justify-end'}">
             {data.institution || data.title}
           </h3>
           <p className="text-base text-zinc-400 font-medium mb-3">
@@ -160,4 +159,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
