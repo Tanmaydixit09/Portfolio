@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiArrowRight, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiArrowRight, FiDownload, FiGithub, FiLinkedin, FiMail, FiCode, FiSmartphone, FiFeather } from 'react-icons/fi';
 
 const words = ["Full Stack Developer", "Backend Specialist", "Software Engineer"];
 
@@ -109,35 +109,48 @@ const Hero = () => {
           className="relative lg:block flex justify-center items-center"
         >
           <div className="relative w-72 h-72 md:w-96 md:h-96">
-            {/* Decorative Background Elements */}
+            {/* Decorative Background Elements (circular) */}
             <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute -inset-4 bg-zinc-900 border border-zinc-800/50 rounded-[48px] rotate-6 group-hover:rotate-3 transition-transform duration-700" />
-            <div className="absolute -inset-4 bg-zinc-950 border border-zinc-800 rounded-[48px] -rotate-3 group-hover:rotate-0 transition-transform duration-700" />
-            
+            <div className="absolute -inset-6 bg-zinc-900/60 border border-zinc-800/40 rounded-full rotate-6 group-hover:rotate-3 transition-transform duration-700" />
+            <div className="absolute -inset-8 bg-zinc-950/80 border border-zinc-800 rounded-full -rotate-3 group-hover:rotate-0 transition-transform duration-700" />
+
+            {/* Glowing ring */}
+            <div className="absolute inset-0 rounded-full pointer-events-none z-5 flex items-center justify-center">
+              <div className="w-full h-full rounded-full border-4 border-teal-400/30 shadow-[0_0_40px_rgba(52,211,153,0.15)]" />
+            </div>
+
             {/* The Actual Image (circular frame) */}
-            <div className="absolute inset-0 rounded-full overflow-hidden border border-zinc-800 shadow-2xl relative z-10 flex items-center justify-center">
+            <div className="absolute inset-6 rounded-full overflow-hidden border border-zinc-800 shadow-2xl relative z-10 flex items-center justify-center">
               <img 
                 src="/avatar.jpg" 
                 alt="Tanmay Dixit - Avatar" 
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700 hover:scale-105"
               />
             </div>
-            
-            {/* Floating Tech Badges */}
+
+            {/* Circular Tech Badges */}
             <motion.div 
-              animate={{ y: [0, -10, 0] }}
+              animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 glass px-4 py-2 rounded-xl border border-zinc-700/50 text-xs font-bold text-purple-400 z-20 shadow-lg"
+              className="absolute -top-3 -right-3 w-12 h-12 rounded-full bg-zinc-900/60 border border-teal-400/30 flex items-center justify-center text-teal-300 z-20 shadow-lg"
             >
-              Backend Expert
+              <FiCode />
             </motion.div>
             <motion.div 
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-6 -left-6 glass px-4 py-2 rounded-xl border border-zinc-700/50 text-xs font-bold text-blue-400 z-20 shadow-lg"
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+              className="absolute -bottom-3 -left-3 w-12 h-12 rounded-full bg-zinc-900/60 border border-blue-400/30 flex items-center justify-center text-blue-300 z-20 shadow-lg"
             >
-              CS Undergraduate
+              <FiSmartphone />
             </motion.div>
+            <motion.div 
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+              className="absolute top-1/2 -right-14 w-12 h-12 rounded-full bg-zinc-900/60 border border-purple-400/30 flex items-center justify-center text-purple-300 z-20 shadow-lg"
+            >
+              <FiFeather />
+            </motion.div>
+          </div>
           </div>
         </motion.div>
 
