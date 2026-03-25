@@ -52,13 +52,13 @@ const Contact = () => {
           </div>
 
           <div className="flex flex-col gap-6">
-            <a href="mailto:tanmay@example.com" className="flex items-center gap-5 group p-4 -ml-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
+            <a href="mailto:tanmaydixit09@gmail.com" className="flex items-center gap-5 group p-4 -ml-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
               <div className="w-12 h-12 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 group-hover:text-pink-400 group-hover:border-pink-500/30 transition-all shadow-md">
                 <FiMail size={20} />
               </div>
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-1">Email Protocol</h4>
-                <p className="text-zinc-200 font-medium">tanmay@example.com</p>
+                <p className="text-zinc-200 font-medium">tanmaydixit09@gmail.com</p>
               </div>
             </a>
 

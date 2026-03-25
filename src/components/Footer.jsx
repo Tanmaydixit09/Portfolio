@@ -21,10 +21,10 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="https://github.com/tanmaydixit" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors" aria-label="GitHub">
+            <a href="https://github.com/Tanmay09" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors" aria-label="GitHub">
               <FiGithub size={20} />
             </a>
-            <a href="https://linkedin.com/in/tanmaydixit" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors" aria-label="LinkedIn">
+            <a href="https://linkedin.com/in/tanmaydixit09" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors" aria-label="LinkedIn">
               <FiLinkedin size={20} />
             </a>
           </div>

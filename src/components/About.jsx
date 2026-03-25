@@ -5,78 +5,44 @@ import { FiServer, FiCode, FiDatabase } from 'react-icons/fi';
 const About = () => {
   return (
     <section id="about" className="py-24 relative z-10 w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="grid grid-cols-1 gap-12 lg:gap-8 items-center">
         
         <motion.div
-          initial={{ opacity: 0, lg: { x: -30 } }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="lg:col-span-5 space-y-6 text-zinc-400 order-2 lg:order-1"
+          className="w-full space-y-6 text-zinc-400 py-12 text-center max-w-4xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-8 leading-tight">
-            Engineering precise, <br/>
-            scalable backends.
+            About Me
           </h2>
-          
           <p className="text-xl leading-relaxed text-zinc-300">
-            I am a full-stack developer with a strong emphasis on backend architecture, currently advancing my studies in Computer Science.
+            Cultivating a rigorous foundation in algorithms and system development.
           </p>
           <p className="text-lg leading-relaxed text-zinc-400">
-            I excel at transforming abstract requirements into resilient APIs, optimizing relational databases, and maintaining clean code standards across the entire stack. Designing systems that scale seamlessly is what drives me.
+            Dedicated to refining robust coding architectures and driving continuous innovation through hands-on technical problem solving. I excel at transforming abstract requirements into resilient APIs, optimizing relational databases, and maintaining clean code standards across the entire stack.
           </p>
-
-          <div className="pt-8 mt-8 border-t border-zinc-900 grid grid-cols-2 gap-8">
+          <div className="flex justify-center grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center border-t border-zinc-900 pt-12 mt-8">
             <div>
-              <h4 className="text-2xl font-black text-white mb-1">3+</h4>
-              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest">Years Dev</p>
+              <h4 className="text-3xl font-black text-white mb-1">10+</h4>
+              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest mt-2">Projects</p>
             </div>
             <div>
-              <h4 className="text-2xl font-black text-white mb-1">10+</h4>
-              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest">Projects</p>
+              <h4 className="text-3xl font-black text-white mb-1">260+</h4>
+              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest mt-2">DSA Solved</p>
+            </div>
+            <div>
+              <h4 className="text-3xl font-black text-white mb-1">3+</h4>
+              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest mt-2">Hackathons</p>
+            </div>
+            <div>
+              <h4 className="text-3xl font-black text-white mb-1">C++</h4>
+              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest mt-2">Primary Lang</p>
             </div>
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, lg: { x: 30 } }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="lg:col-span-6 lg:col-start-7 w-full order-1 lg:order-2"
-        >
-          <div className="flex flex-col gap-4">
-            <div className="glass-card p-6 flex items-start gap-5 hover:border-zinc-700 transition-colors duration-300">
-              <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 flex-shrink-0 shadow-lg">
-                <FiServer size={22} className="text-purple-400"/>
-              </div>
-              <div>
-                <h4 className="text-lg text-zinc-100 font-bold mb-1 tracking-tight">System Architecture</h4>
-                <p className="text-sm text-zinc-500 leading-relaxed">Designing RESTful APIs and resilient microservices using Node.js and Express to handle concurrent loads securely.</p>
-              </div>
-            </div>
-            
-            <div className="glass-card p-6 flex items-start gap-5 hover:border-zinc-700 transition-colors duration-300">
-              <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 flex-shrink-0 shadow-lg">
-                <FiDatabase size={22} className="text-blue-400" />
-              </div>
-              <div>
-                <h4 className="text-lg text-zinc-100 font-bold mb-1 tracking-tight">Data Engineering</h4>
-                <p className="text-sm text-zinc-500 leading-relaxed">Structuring complex schemas in MongoDB and executing performant SQL queries for robust data integrity.</p>
-              </div>
-            </div>
-
-            <div className="glass-card p-6 flex items-start gap-5 hover:border-zinc-700 transition-colors duration-300">
-              <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 flex-shrink-0 shadow-lg">
-                <FiCode size={22} className="text-teal-400" />
-              </div>
-              <div>
-                <h4 className="text-lg text-zinc-100 font-bold mb-1 tracking-tight">Frontend Ecosystem</h4>
-                <p className="text-sm text-zinc-500 leading-relaxed">Crafting responsive, highly interactive user interfaces using React, Tailwind CSS, and elegant Framer Motion animations.</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

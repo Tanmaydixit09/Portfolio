@@ -7,7 +7,7 @@ const navItems = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Education', href: '#education' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -68,10 +68,10 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-5">
-            <a href="https://github.com/tanmaydixit" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
+            <a href="https://github.com/Tanmay09" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
               <FiGithub size={18} />
             </a>
-            <a href="https://linkedin.com/in/tanmaydixit" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
+            <a href="https://linkedin.com/in/tanmaydixit09" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
               <FiLinkedin size={18} />
             </a>
           </div>
@@ -108,8 +108,8 @@ const Navbar = () => {
               </a>
             ))}
             <div className="pt-4 mt-2 border-t border-zinc-800 flex gap-4">
-              <a href="https://github.com/tanmaydixit" className="text-zinc-400 hover:text-white"><FiGithub size={20} /></a>
-              <a href="https://linkedin.com/in/tanmaydixit" className="text-zinc-400 hover:text-white"><FiLinkedin size={20} /></a>
+              <a href="https://github.com/Tanmay09" className="text-zinc-400 hover:text-white"><FiGithub size={20} /></a>
+              <a href="https://linkedin.com/in/tanmaydixit09" className="text-zinc-400 hover:text-white"><FiLinkedin size={20} /></a>
             </div>
           </motion.div>
         )}

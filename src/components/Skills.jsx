@@ -3,23 +3,23 @@ import { motion } from 'framer-motion';
 
 const skillsData = [
   {
-    category: "Backend Architecture",
-    skills: ["Node.js", "Express.js", "REST APIs", "JWT Auth", "System Design"],
+    category: "Languages",
+    skills: ["HTML", "JavaScript", "Java", "Python", "C", "C++"],
     color: "from-zinc-200 to-zinc-400"
   },
   {
-    category: "Frontend Engineering",
-    skills: ["JavaScript", "React.js", "Tailwind CSS", "Framer Motion", "HTML/CSS"],
+    category: "Frameworks",
+    skills: ["React.js", "Node.js", "Express.js", "Tailwind CSS"],
     color: "from-zinc-300 to-zinc-500"
   },
   {
-    category: "Databases & Storage",
-    skills: ["MongoDB", "SQL", "Mongoose", "Database Design"],
+    category: "Tools & Platforms",
+    skills: ["SQL", "MongoDB", "GitHub", "WebSocket", "JWT", "REST APIs"],
     color: "from-zinc-400 to-zinc-600"
   },
   {
-    category: "Dev Tools & Practices",
-    skills: ["Git", "GitHub", "Vite", "Postman", "C++"],
+    category: "Core Competencies",
+    skills: ["Problem-Solving", "Team Collaboration", "Adaptability", "Data Structures"],
     color: "from-zinc-500 to-zinc-700"
   }
 ];
@@ -35,8 +35,8 @@ const Skills = () => {
         className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6"
       >
         <div>
-          <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-4">
-            Technical Arsenal.
+          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-4">
+            Tech Skills
           </h2>
           <p className="text-zinc-500 max-w-lg text-lg">
             A comprehensive overview of the tools and technologies I utilize to build robust digital solutions.
@@ -75,7 +75,7 @@ const Skills = () => {
               ))}
             </div>
           </motion.div>
-        ))}
+        ))} 
       </div>
     </section>
   );

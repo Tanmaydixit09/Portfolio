@@ -1,41 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiArrowRight, FiDownload, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiArrowRight, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const words = ["Full Stack Developer", "Backend Specialist", "Software Engineer"];
 
 const Hero = () => {
-  const [index, setIndex] = useState(0);
-  const [subIndex, setSubIndex] = useState(0);
-  const [reverse, setReverse] = useState(false);
-  const [blink, setBlink] = useState(true);
-
-  useEffect(() => {
-    const timeout2 = setTimeout(() => setBlink((prev) => !prev), 500);
-    return () => clearTimeout(timeout2);
-  }, [blink]);
-
-  useEffect(() => {
-    if (index === words.length) {
-      setIndex(0);
-      return;
-    }
-    if (subIndex === words[index].length + 1 && !reverse) {
-      setTimeout(() => setReverse(true), 2500);
-      return;
-    }
-    if (subIndex === 0 && reverse) {
-      setReverse(false);
-      setIndex((prev) => prev + 1);
-      return;
-    }
-    const timeout = setTimeout(() => {
-      setSubIndex((prev) => prev + (reverse ? -1 : 1));
-    }, Math.max(reverse ? 40 : 80, parseInt(Math.random() * 40)));
-
-    return () => clearTimeout(timeout);
-  }, [subIndex, index, reverse]);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -50,84 +19,129 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-16 pb-12 w-full">
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="w-full relative z-10 flex flex-col items-start md:items-center md:text-center px-4"
-      >
-        <motion.div variants={itemVariants} className="mb-8">
-          <span className="px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/40 text-zinc-400 text-xs tracking-widest uppercase font-medium shadow-sm flex items-center gap-2 backdrop-blur-md">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+    <section id="home" className="min-h-screen flex items-center pt-24 pb-12 w-full overflow-hidden">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="relative z-10 flex flex-col items-start px-4 lg:px-0"
+        >
+          <motion.div variants={itemVariants} className="mb-8">
+            <span className="px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/40 text-zinc-400 text-xs tracking-widest uppercase font-medium shadow-sm flex items-center gap-2 backdrop-blur-md">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+              </span>
+              Available for Opportunities
             </span>
-            Available for Opportunities
-          </span>
-        </motion.div>
+          </motion.div>
 
-        <motion.h1 
-          variants={itemVariants}
-          className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 text-white leading-tight"
-        >
-          Hi, I'm <br className="md:hidden" />
-          <span className="bg-gradient-to-r from-zinc-100 via-zinc-400 to-zinc-500 bg-clip-text text-transparent">
-             Tanmay Dixit.
-          </span>
-        </motion.h1>
-
-        <motion.div 
-          variants={itemVariants}
-          className="h-10 md:h-16 flex items-center md:justify-center text-xl md:text-3xl lg:text-4xl text-zinc-400 font-light tracking-wide mb-6"
-        >
-          <span>{`${words[index].substring(0, subIndex)}`}</span>
-          <span className={`w-[2px] h-[60%] bg-purple-500 ml-1.5 ${blink ? 'opacity-100' : 'opacity-0'} transition-opacity`}></span>
-        </motion.div>
-
-        <motion.p 
-          variants={itemVariants}
-          className="max-w-xl md:max-w-2xl text-base md:text-lg text-zinc-400 mb-12 leading-relaxed"
-        >
-          Architecting robust backend systems and crafting seamless full-stack applications. 
-          Currently studying Computer Science with a passion for clean code and elevated design.
-        </motion.p>
-
-        <motion.div 
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto"
-        >
-          <a
-            href="#projects"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-zinc-950 font-semibold hover:bg-zinc-200 hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 group"
+          <motion.h1 
+            variants={itemVariants}
+            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 text-white leading-tight"
           >
-            Explore Projects
-            <FiArrowRight className="group-hover:translate-x-1.5 transition-transform" />
-          </a>
-          <a
-            href="/resume.pdf"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full glass border border-zinc-700 text-zinc-300 font-medium hover:bg-zinc-800 transition-all flex items-center justify-center gap-2"
+            Hi, I'm <br className="md:hidden" />
+            <span className="bg-gradient-to-r from-zinc-100 via-zinc-400 to-zinc-500 bg-clip-text text-transparent">
+              Tanmay Dixit.
+            </span>
+          </motion.h1>
+
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-col gap-2 mb-6"
           >
-            <FiDownload />
-            Resume
-          </a>
+            <span className="text-xl md:text-3xl lg:text-4xl text-zinc-400 font-light tracking-wide">
+              {words[0]}
+            </span>
+          </motion.div>
+
+          <motion.p 
+            variants={itemVariants}
+            className="max-w-xl text-base md:text-lg text-zinc-400 mb-12 leading-relaxed"
+          >
+            Architecting robust backend systems and crafting seamless full-stack applications. 
+            Currently studying Computer Science with a passion for clean code and elevated design.
+          </motion.p>
+
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto"
+          >
+            <a
+              href="#projects"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-zinc-950 font-semibold hover:bg-zinc-200 hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 group"
+            >
+              Explore Projects
+              <FiArrowRight className="group-hover:translate-x-1.5 transition-transform" />
+            </a>
+            <a
+              href="/resume.pdf"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full glass border border-zinc-700 text-zinc-300 font-medium hover:bg-zinc-800 transition-all flex items-center justify-center gap-2"
+            >
+              <FiDownload size={18} />
+              Download CV
+            </a>
+          </motion.div>
+
+          <motion.div 
+            variants={itemVariants}
+            className="mt-12 flex gap-6 text-zinc-500"
+          >
+            <a href="https://github.com/Tanmaydixit09" target="_blank" rel="noreferrer" className="hover:text-zinc-200 transition-colors flex items-center gap-2">
+              <FiGithub size={20} />
+            </a>
+            <a href="https://www.linkedin.com/in/tanmaydixit09/" target="_blank" rel="noreferrer" className="hover:text-zinc-200 transition-colors flex items-center gap-2">
+              <FiLinkedin size={20} />
+            </a>
+            <a href="mailto:tanmaydixit09@gmail.com" className="hover:text-zinc-200 transition-colors flex items-center gap-2">
+              <FiMail size={20} />
+            </a>
+          </motion.div>
         </motion.div>
 
-        <motion.div 
-          variants={itemVariants}
-          className="w-full mt-24 pt-8 border-t border-zinc-800/50 flex flex-col md:flex-row items-center justify-between text-zinc-500 text-sm gap-4 hidden sm:flex"
+        {/* Profile Image Section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="relative lg:block flex justify-center items-center"
         >
-          <p>Full Stack Developer based in India.</p>
-          <div className="flex gap-5">
-            <a href="https://github.com/tanmaydixit" target="_blank" rel="noreferrer" className="hover:text-zinc-200 transition-colors flex items-center gap-2">
-              <FiGithub size={16} /> GitHub
-            </a>
-            <a href="https://linkedin.com/in/tanmaydixit" target="_blank" rel="noreferrer" className="hover:text-zinc-200 transition-colors flex items-center gap-2">
-              <FiLinkedin size={16} /> LinkedIn
-            </a>
+          <div className="relative w-72 h-72 md:w-96 md:h-96">
+            {/* Decorative Background Elements */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute -inset-4 bg-zinc-900 border border-zinc-800/50 rounded-[48px] rotate-6 group-hover:rotate-3 transition-transform duration-700" />
+            <div className="absolute -inset-4 bg-zinc-950 border border-zinc-800 rounded-[48px] -rotate-3 group-hover:rotate-0 transition-transform duration-700" />
+            
+            {/* The Actual Image */}
+            <div className="absolute inset-0 rounded-[40px] overflow-hidden border border-zinc-800 shadow-2xl relative z-10">
+              <img 
+                src="/avatar.jpg" 
+                alt="Tanmay Dixit - Avatar" 
+                className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700 hover:scale-105"
+              />
+            </div>
+            
+            {/* Floating Tech Badges */}
+            <motion.div 
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-6 -right-6 glass px-4 py-2 rounded-xl border border-zinc-700/50 text-xs font-bold text-purple-400 z-20 shadow-lg"
+            >
+              Backend Expert
+            </motion.div>
+            <motion.div 
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute -bottom-6 -left-6 glass px-4 py-2 rounded-xl border border-zinc-700/50 text-xs font-bold text-blue-400 z-20 shadow-lg"
+            >
+              CS Undergraduate
+            </motion.div>
           </div>
         </motion.div>
-      </motion.div>
+
+      </div>
     </section>
   );
 };
