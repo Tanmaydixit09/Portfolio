@@ -10,6 +10,20 @@ const achievements = [
     link: 'https://leetcode.com/u/tanmaydixit09/'
   },
   {
+    title: 'HackerRank Profile & Certifications',
+    date: 'Updated Mar 2026',
+    description:
+      'Completed multiple HackerRank certifications including Problem Solving (Intermediate), JavaScript (Intermediate), React (Basic) and holds skills badges (Problem Solving, C++, Java, Python).',
+    link: 'https://www.hackerrank.com/profile/tanmaydixit09'
+  },
+  {
+    title: 'GeeksforGeeks Profile',
+    date: 'Updated Mar 2026',
+    description:
+      'Active on GeeksforGeeks with problem practice and articles; profile lists coding activity and a focus on algorithmic problem solving.',
+    link: 'https://www.geeksforgeeks.org/profile/tanmaydc61i'
+  },
+  {
     title: 'Google Cloud Certified - Associate Cloud Engineer',
     date: 'Mar 2025',
     description: 'Demonstrated ability to deploy applications on Google Cloud and manage cloud resources.',
