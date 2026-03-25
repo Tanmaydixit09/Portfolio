@@ -3,6 +3,13 @@ import { motion } from 'framer-motion';
 
 const achievements = [
   {
+    title: 'LeetCode Profile',
+    date: 'Updated Mar 2026',
+    description:
+      'Solved 236 problems (Easy: 109, Medium: 109, Hard: 18). Acceptance ~93.3%. Active days: 50, Max streak: 31. Recent participation in LeetCoding challenges and steady submissions.',
+    link: 'https://leetcode.com/u/tanmaydixit09/'
+  },
+  {
     title: 'Google Cloud Certified - Associate Cloud Engineer',
     date: 'Mar 2025',
     description: 'Demonstrated ability to deploy applications on Google Cloud and manage cloud resources.',
@@ -12,12 +19,6 @@ const achievements = [
     title: 'First Place - University Hackathon 2024',
     date: 'Dec 2024',
     description: 'Led a 4-person team to build a real-time collaboration app using WebSockets.',
-    link: ''
-  },
-  {
-    title: 'Top 10% on LeetCode (Algorithms)',
-    date: '2023',
-    description: 'Consistent problem solving across algorithms and data structures challenges.',
     link: ''
   }
 ];
