@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX, FiGithub, FiLinkedin } from 'react-icons/fi';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -8,6 +9,7 @@ const navItems = [
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Achievements', href: '#achievements' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -67,7 +69,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center space-x-5">
+          <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <a href="https://github.com/Tanmay09" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
               <FiGithub size={18} />
             </a>
