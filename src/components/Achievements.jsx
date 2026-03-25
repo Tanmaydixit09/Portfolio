@@ -23,18 +23,7 @@ const achievements = [
       'Active on GeeksforGeeks with problem practice and articles; profile lists coding activity and a focus on algorithmic problem solving.',
     link: 'https://www.geeksforgeeks.org/profile/tanmaydc61i'
   },
-  {
-    title: 'Google Cloud Certified - Associate Cloud Engineer',
-    date: 'Mar 2025',
-    description: 'Demonstrated ability to deploy applications on Google Cloud and manage cloud resources.',
-    link: ''
-  },
-  {
-    title: 'First Place - University Hackathon 2024',
-    date: 'Dec 2024',
-    description: 'Led a 4-person team to build a real-time collaboration app using WebSockets.',
-    link: ''
-  }
+  
 ];
 
 const Achievements = () => {
